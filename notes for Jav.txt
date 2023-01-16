@@ -1,0 +1,543 @@
+Questions :
+	https://www.javatpoint.com/java-programs
+
+
+
+
+
+
+
+
+ - int a=5; int a=0; -> cause error in java .
+
+ - A variable declared inside pair of brackets
+ {” and “}  in a method has scope within the brackets only.
+ Examples : 
+	 {int a=5;}  {int a=6; System.out.print(a); } -> output: 6
+
+ - Any variable defined in a class outside of any method can be used by all member methods.
+
+ -Variable Must Be intialized TO aVoid Error . 
+
+ - Data Types || Default Valus (dv) 
+  bool (dv=false) size: Virsual Machine Dependent 
+  byte (  dv=0  ) size= 1byte  -128:127
+  short(  dv=0  ) size= 2byte  -32,768 : 32, 767
+  int  (  dv=0  ) size= 4byte   -2, 147, 483, 648 : 2, 147, 483, 647 
+  long (  dv=0  ) size= 8byte   -9, 223, 372, 036, 854, 775, 808 : 9, 223, 372, 036, 854, 775, 807
+  
+ float ( dv=0.0 ) size= 4byte
+ double( dv=0.0 ) size= 8byte
+
+ char size= 2byte
+
+ -java uses the Unicode system not the ASCII code system -> so Char size =2 byte
+
+ -Switch case if we didnt use break after cases after true case all will be done (without chech the case );
+
+ -Note:    The Java switch statement only works with:
+
+	-> Primitive data types: byte, short, char, and int
+	-> Enumerated types
+	-> String Class
+	-> Wrapper Classes: Character, Byte, Short, and Integer.
+
+- final As Constant in C++ .
+
+- Jagged Array -> 
+	// Declaring 2-D array with 2 rows
+        int arr[][] = new int[2][];
+ 
+        // Making the above array Jagged
+ 
+        // First row has 3 columns
+        arr[0] = new int[3];
+ 
+        // Second row has 2 columns
+        arr[1] = new int[2];
+-
+
+ - Built in Function 
+			-> Arrays.toString(ArrayName) -> to make a copy of structure of array As String 
+			-> Arrays.sort(array_adress, from_Index, to_Index) ; 
+			-> s.substring(  IndexPrinted , NotPrinted )
+ - For-each Loop Sytnax
+
+	for(dataType item : array) {
+  	  ... // item is changed to all items in array
+ - char ch = 'a';
+  int ascii = ch;	
+	-> Here ascii is = 97 || way to convert char to Ascaii code;
+
+ - In Java There Is No Pointer . 
+
+
+
+
+
+
+			^^    		Methoud OverRidding	    ^^
+
+
+
+
+1- The method must have the same name as in the parent class
+2- The method must have the same parameter as in the parent class.
+3- There must be an IS-A relationship (inheritance).
+
+
+* Why can we not override static method?
+ -> It is because the static method is bound with class whereas instance method is bound with an object.
+   Static belongs to the class area, and an instance belongs to the heap area.
+
+* Can we override java main method?
+ -> No, because the main is a static method.
+
+
+class Bank{  
+int getRateOfInterest(){return 0;}  
+}  
+//Creating child classes.  
+class SBI extends Bank{  
+int getRateOfInterest(){return 8;}  
+}  
+
+
+-- -
+As you can see in the above example, the return type of the get() method of A class is A but the return type of the get() method of B class is B. 
+Both methods have different return type but it is method overriding. This is known as covariant return type.
+
+A get(){return this;}    
+}    
+    
+class B1 extends A{    
+@Override  
+B1 get(){return this;}    
+void message(){System.out.println("welcome to covariant return type");}    
+    
+public static void main(String args[]){    
+new B1().get().message();    
+}    
+}    
+output : welcome to covariant return type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	## 		-	Object Orinted Programing 	-	##
+
+
+
+- Modifiers: A class can be public or has default access.
+
+- OOP is faster and easier to execute
+
+- OOP provides a clear structure for the programs
+
+- OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+
+- OOP makes it possible to create full reusable applications with less code and shorter development time
+
+- This default constructor calls the class parent’s no-argument constructor 
+
+- arguments Integer and String both are not primitive data types in Java. That means they accept null values.
+
+- Error: An Error indicates a serious problem that a reasonable application should not try to catch.
+
+- Exception: Exception indicates conditions that a reasonable application might try to catch.
+
+ # Scanner input =new Scanner( System.in ) ; ->>>> Here input Store Adress of The object . 
+- In Java, there is no operator to create a copy of an object. Unlike C++, in Java, if we use the assignment
+  operator then it will create a copy of the reference variable and not the object.
+
+// creating object of class Test
+Test t1 = new Test();
+			   ->clone() method is present in Object class. It creates and returns a copy of the object.
+
+// creating clone of above object
+Test t2 = (Test)t1.clone();
+
+ -  Note: The phrase "instantiating a class" means the same thing as "creating an object." When you create an object
+   , you are creating an "instance" of a class, therefore "instantiating" a class. 
+
+
+   	 -- -  -- - - - -   		Constants  	- --	 -	 - -	-
+
+ - String are immutable in Java. You can't change them. 
+
+
+- - -- 
+
+				-  ArrayLists  - 
+
+ # import java.util.ArrayLists;    -> To import This Class. 
+
+-It contains the index-based methods to insert, update, delete and search the elements.
+ It can have the duplicate elements also. We can also store the null elements in the list.
+
+ - JAVA METHOUDS - 
+
+
+ * void add(int index, E element) -> It is used to insert the specified element at the specified position in a list.
+
+ * boolean add ( E element ) -> to push Element at the End of List .
+
+ * list.addAll ( list2 )  -> to add all element of list2 to end of list 1 .
+
+ * list.addAll ( index, list2 )  -> to add all element of list2 begging at this index .
+ 
+ * void clear()	 -> It is used to remove all of the elements from this list. 
+
+ * boolean equals(Object o)  -> to check if all element is Equeled .
+
+ * int hashcode() -> It is used to return the hash code value for a list.
+
+ * get(int index) -> It is used to fetch the element from the particular position of the list.
+
+ * boolean isEmpty() -> It returns true if the list is empty, otherwise false.
+
+ * int lastIndexOf(Object o)	It is used to return the index in this list of the last occurrence of the specified element
+   or -1 if the list does not contain this element.
+
+ * Object[] toArray() -> It is used to return an array containing all of the elements in this list in the correct order.
+
+ * string split() -> Input String: 016-78967 Regular Expression: - Output : {"016", "78967"} -> return array || [, ?.@] -> to spilt more than one .
+
+ * import java.util.Comparator;
+
+	Arraylist.sort(Comparator.OrderType()); -> to order strimg
+
+ * ArrayList.toArray( ArrayRefrences ); -> here transfere MUST equaled size || Length .
+  
+  Object[] obj = languages.toArray(); another way . 
+
+
+ *  .toString(); ->  converts an arraylist into a String.
+
+ * ensureCapacity() -> resized the arraylist to store 3 elements. . However, when we add 4th element in the arraylist, the arraylist automatically resizes.
+
+  
+
+
+
+
+			-	Constructor & Destructor 	-
+
+
+. Default Constructors: Default constructor is the constructor which doesn’t take any argument. It has no parameters.
+  Parameterized Constructors: It is possible to pass arguments to constructors. Typically, these arguments help initialize an object when it is created.
+  To create a parameterized constructor, simply add parameters to it the way you would to any other function. 
+  When you define the constructor’s body, use the parameters to initialize the object. 
+
+
+ -
+		< Copy Constructor >
+
+ 	Complex c1 = new Complex(10, 15);
+ 
+         
+        Complex c2 = new Complex(c1); -> here Cause ERORR 
+
+	 -> - > Complex c2=c1; -> here Copy Only Reference from c1 . Result is : any modifiy in c2 will modifiy c1; -> end of video 10- oop desoky declere this point .
+
+
+ # #  static methoud doesnt have ability to modifiy only static mehouds and attributes
+ # #  normal methouds can access static but reflect is not allowed .
+
+
+
+
+
+
+
+
+
+			-	Passing by Reference And Passing By Value 	-
+
+
+
+ - there is no call by refrence only by reference of objects .
+
+
+
+
+			 - - - - - -     	inheritance	   - - - - -
+
+
+
+ -The super keyword is a unique keyword that refers to an immediate parent class's object. 4
+  If you create an instance of the child class, then the super keyword implicitly refers to the parent class instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 - - - - - -     	Java Runtime Polymorphism	   - - - - -
+
+
+ In this example, we are creating two classes Bike and Splendor. 
+ Splendor class extends Bike class and overrides its run() method. 
+ We are calling the run method by the reference variable of Parent class. 
+ Since it refers to the subclass object and subclass method overrides the Parent class method,
+ the subclass method is invoked at runtime.
+
+
+Ex. 
+class Bike{  
+  void run(){System.out.println("running");}  
+}  
+class Splendor extends Bike{  
+  void run(){System.out.println("running safely with 60km");}  
+  
+  public static void main(String args[]){  
+    Bike b = new Splendor();//upcasting  
+    b.run();  
+  }  
+}  
+Test it Now
+Output:
+
+running safely with 60km.
+
+
+--
+
+
+Ex2.
+class Shape{  
+void draw(){System.out.println("drawing...");}  
+}  
+class Rectangle extends Shape{  
+void draw(){System.out.println("drawing rectangle...");}  
+}  
+class Circle extends Shape{  
+void draw(){System.out.println("drawing circle...");}  
+}  
+class Triangle extends Shape{  
+void draw(){System.out.println("drawing triangle...");}  
+}  
+class TestPolymorphism2{  
+public static void main(String args[]){  
+Shape s;  
+s=new Rectangle();  
+s.draw();  
+s=new Circle();  
+s.draw();  
+s=new Triangle();  
+s.draw();  
+}  
+}  
+Test it Now
+Output:
+
+drawing rectangle...
+drawing circle...
+drawing triangle...
+
+
+
+
+
+Ex3
+Java Runtime Polymorphism with Data Member
+A method is overridden, not the data members, so runtime polymorphism can't be achieved by data members.
+
+In the example given below, both the classes have a data member speedlimit. We are accessing the data member by the reference variable of Parent class which refers to the subclass object. Since we are accessing the data member which is not overridden, hence it will access the data member of the Parent class always.
+
+Rule: Runtime polymorphism can't be achieved by data members.
+class Bike{  
+ int speedlimit=90;  
+}  
+class Honda3 extends Bike{  
+ int speedlimit=150;  
+  
+ public static void main(String args[]){  
+  Bike obj=new Honda3();  
+  System.out.println(obj.speedlimit);//90  
+}  
+Test it Now
+Output:
+
+
+90
+
+
+
+
+
+Ex.4
+
+class Animal{  
+void eat(){System.out.println("animal is eating...");}  
+}  
+class Dog extends Animal{  
+void eat(){System.out.println("dog is eating...");}  
+}  
+class BabyDog1 extends Dog{  
+public static void main(String args[]){  
+Animal a=new BabyDog1();  
+a.eat();  
+}}  
+Test it Now
+Output:
+
+Dog is eating
+Since, BabyDog is not overriding the eat() method, so eat() method of Dog class is invoked.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+------------------------------------------------------------------------------------------
+
+ 			(  S T A C K  O V E R  F L O W  ( Q )  )
+
+!!  to acess a char in string it is impossible || what You can do ? 
+
+	-You need to create a new string with the character replaced.	
+
+		String myName = "domanokz";
+		String newName = myName.substring(0,4)+'x'+myName.substring(5);
+
+	-Turn the String into a char[], replace the letter by index, then convert the array back into a String.
+
+		String myName = "domanokz";
+		char[] myNameChars = myName.toCharArray();
+		myNameChars[4] = 'x';
+		myName = String.valueOf(myNameChars);
+
+
+
+!!  I want to declare an empty int like you would do with a String: String userName ="";
+
+	If you must assign your int background variable a default value for some reason, -1 is often workable.
+ 	You cannot assign an int variable to anything other than an integer value ("" is a String so won't work).
+
+
+
+
+
+
+
+!!  What is the difference between private method and final method in java? 
+
+	private is about accessibility like public or protected or no modifier.
+	final is about modification during inheritance.
+	private methods are not just accessible from the outside of the class.
+	final methods can not be overridden by the child class.
+	As private method is not accessible from the child classes it also cannot
+	be overridden but final method can or can not be accessible based on the access modifier.
+
+
+
+
+
+
+
+
+!! Why default constructor is required(explicitly) in a parent class if it has an argumented constructor
+
+	I would say this statement is not always correct. As ideally its not required.
+
+	The Rule is : If you are explicitly providing an argument-ed constructer, then the default constructor (non-argumented) is not available to the class.
+
+	For Example :   
+	class A {    
+	  A(int i){    
+  	}
+	}
+
+	class B extends A {
+	}
+	So when you write
+
+	B obj_b = new B();
+	It actually calls the implicit constructor provided by java to B, which again calls the super(),
+	which should be ideally A(). But since you have provided argument-ed constructor to A, the default constructor
+ 	i:e A() is not available to B().
+
+	That's the reason you need A() to be specifically declared for B() to call super().
+
+!! why variable in try and catch java not declered out of it ? 
+
+	So, if you declare a variable in try block, (for that matter in any block) it will be local to
+	that particular block, the life time of the variable expires after the execution of the block.
+ 	Therefore, you cannot access any variable declared in a block, outside it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- 

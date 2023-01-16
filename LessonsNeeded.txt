@@ -1,0 +1,121 @@
+ # # - - - -  Time Complexity - - - - # #
+ 
+  Examples 1 :
+
+		- sum = 0; -> 1 unite of time ( u o f )
+ 
+		- for( int i = 0 ; i < n ; i + + )
+
+		     {     1     | (n+1) | n    -> total 2n+2 = n
+				
+			sum = sum + arr[i] ; -> total = 2n = n -> arthematic operation + assignment operator .
+
+		     }
+		
+				TIME Function = 4n + 3 
+
+
+	Example 2 : 
+
+		i = 1 ; 	1 
+		n = 10 ;	1
+		while ( i < n  )      2 ^ k > = n then k (number of times ) = log2 ( n ) ;  
+		{
+			i * = 2 ;     2 ^ k > = n then k (number of times ) = log2 ( n ) ;    
+			
+		} 
+		 
+		Time Function = 2 + 2 log2 ( n ) .
+
+
+
+  # # - - - -  Big O Notation - - - - # #
+
+
+ - Apreviation for Big Order Notation .
+
+ - Here are five Big O run times that you’ll encounter a lot, sorted from fastest to slowest:
+	• O(log n), also known as log time. Example: Binary search. 
+	• O(n), also known as linear time. Example: Simple search. 
+	• O(n * log n). Example: A fast sorting algorithm, like quicksort  (coming up in chapter 4). 
+	• O(n2). Example: A slow sorting algorithm, like selection sort  (coming up in chapter 2). 
+	• O(n!). Example: A really slow algorithm, like the traveling salesperson (coming up next!).
+
+
+ - Should Know this  :
+	• Algorithm speed isn’t measured in seconds, but in growth of the number of operations. 
+	• Instead, we talk about how quickly the run time of an algorithm increases as the size of the input increases. ••• •••
+	• Run time of algorithms is expressed in Big O notation. ••• •••
+	• O(log n) is faster than O(n), but it gets a lot faster as the list of items you’re searching grows.
+
+
+
+  # Recap
+	• Binary search is a lot faster than simple search. 
+	• O(log n) is faster than O(n), but it gets a lot faster once the list of items you’re searching through grows. 
+	• Algorithm speed isn’t measured in seconds. 
+	• Algorithm times are measured in terms of growth of an algorithm. 
+	• Algorithm times are written in Big O notation.
+
+
+
+ 		# # - - - -  THE STaCK - - - - # #
+
+
+
+#  The stack of sticky notes is much simpler. 
+      When you insert an item, it gets added to the top of the list. 
+
+      When you read an item, you only read the topmost item, and it’s taken off the list.
+ 
+      So your todo list has only two actions: push (insert) and pop (remove and read).
+
+
+ -> when you call a function from another function, the calling function is paused in a partially completed state -> Mean Stack Concept .
+
+
+
+                       --      RunTime Execption    -- 
+
+	# Using Java Language #
+
+ 1 ) 
+		int x = 100;
+		int y = 0;
+		System.out.println(x/y);
+
+
+ 2 ) 
+		String data = null;
+		System.out.println(data.length());
+
+
+
+ 3 ) 
+		String[] data = new String[5];
+		data[6] = "More Data"; 
+
+ 4 )
+		String[] data = new String[-5]; // throws Runtime Exception
+		data[1] = "More Data";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
